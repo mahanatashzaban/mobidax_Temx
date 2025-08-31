@@ -5,9 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobidax_redux/persistor.dart';
 import 'package:mobidax_redux/redux.dart';
-import 'package:mobidax_redux/web_persistor.dart';
-import 'package:universal_platform/universal_platform.dart';
-import 'package:url_strategy/url_strategy.dart';
 
 import 'components/account_api_key.dart';
 import 'components/account_screen_change_password.dart';
@@ -38,8 +35,8 @@ import 'utils/config.dart';
 import 'utils/theme.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
-final persistor = UniversalPlatform.isWeb ? WebPersistor() : AppPersistor();
 
+final persistor = AppPersistor();
 void main() async {
   Paint.enableDithering = true;
   WidgetsFlutterBinding.ensureInitialized();
@@ -67,7 +64,6 @@ void main() async {
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then(
     (_) {
-      setPathUrlStrategy();
       runApp(
         EasyLocalization(
           supportedLocales: supportedLocales,

@@ -4,7 +4,7 @@ description: Cryptocurrency Exchange Software for iOS & Android
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.10.0 <3.0.0"
   flutter: '^2.0.0'
 
 publish_to: none
@@ -43,8 +43,6 @@ dependencies:
   path_provider: ^1.6.10 # Local files path tool
   firebase_dynamic_links: ^0.5.1  # Firebase dynamic links
   firebase_core: ^0.7.0 # Firebase Core
-  universal_platform: ^0.1.3 # Detecting platform
-  url_strategy: ^0.1.1 # Setting the web URL strategy
   url_launcher: ^5.7.5 # Launch URLs
   simple_gravatar: ^1.0.5 # Gravatar kit
 
